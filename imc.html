@@ -1,0 +1,11 @@
+<meta charset="utf-8">
+<script src="http://192.168.133.156:8080/funcoes.js"></script>
+<script>
+    texto = "Digite o peso";
+    var peso = pegaNumeroCorretoDaTela();
+    texto = "Digite sua altura";
+    var altura = pegaNumeroCorretoDaTela();
+    var imc = peso/(altura*altura);
+    numero = imc;
+    document.write("Seu IMC é: "+transformaDecimalEmTexto());
+</script>

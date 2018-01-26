@@ -1,0 +1,17 @@
+<meta charset="utf-8">
+
+<script>
+    var pegaNumeroCorreto = parseFloat(prompt("Digite a distância").replace(",",".").replace("o","0"));
+    var distancia = pegaNumeroCorreto;
+    document.write("Distância: "+distancia.toFixed(2).replace(".",",")+"km<br><br>");
+    document.write("Carro:<br>");
+    var gastoGasolina = pegaNumeroCorreto;
+    var gastoEstacionamento = pegaNumeroCorreto;
+    var precoCarro = gastoGasolina + gastoEstacionamento;
+    document.write("Gasto gasolina: R$"+ gastoGasolina.toFixed(2).replace(".",","));
+    document.write("<br>Estacionamento: R$ " + gastoEstacionamento.toFixed(2).replace(".",",") + "<br>");
+    document.write("Preço total: R$" + precoCarro.toFixed(2).replace(".",",")+"<br><br>");
+    document.write("Uber:<br>");
+    var precoUber = pegaNumeroCorreto;
+    document.write("Preço total: R$ " + precoUber.toFixed(2).replace(".",",") + "<br>");
+</script>
