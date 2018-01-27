@@ -1,0 +1,28 @@
+<meta charset="utf-8">
+<script src="lib.js"></script>
+<script>
+
+    var origem = mostraMapa()
+    var destino = mostraMapa()
+    var distancia = pegaDistanciaDoGoogle(origem, destino)
+    
+    document.write("Distância: "+transformaDecimalEmTexto(distancia)+"km<br><br>");
+    document.write("Carro:<br>");
+
+    var gastoGasolina = pegaNumeroCorretoDaTela("Digite o gasto com gasolina");
+
+    var gastoEstacionamento = pegaNumeroCorretoDaTela("Digite o valor do estacionamento");
+    var precoCarro = gastoGasolina + gastoEstacionamento;
+    
+    document.write("Gasto gasolina: R$"+ transformaDecimalEmTexto(gastoGasolina));
+    document.write("<br>Estacionamento: R$ " + transformaDecimalEmTexto(gastoEstacionamento) + "<br>");
+    
+    document.write("Preço total: R$" + transformaDecimalEmTexto(precoCarro)+"<br><br>");
+    document.write("Uber:<br>");
+
+    var tempo = pegaTempoDoGoogle("Caelum", "EACH")
+
+    var precoUber = 1.4 * distancia + 0.2 * tempo
+    
+    document.write("Preço total: R$ " + transformaDecimalEmTexto(precoUber) + "<br>");
+</script>

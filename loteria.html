@@ -1,0 +1,23 @@
+<meta charset="utf-8">
+<h1>Loteria</h1>
+<script src="lib.js"></script>
+<script>
+
+var limite = pegaNumeroCorretoDaTela("Até quanto")
+var sorteado = Math.round(Math.random() * limite)
+
+console.log(sorteado)
+
+var chute = pegaNumeroCorretoDaTela("Chuta aí de 0 a" + limite)
+
+while(chute > limite || chute < 0 || isNaN(chute)){
+    chute = pegaNumeroCorretoDaTela("Escreveu errado. Digite de novo. De 0 a" + limite)
+}
+
+if(chute == sorteado) {
+    document.write("Ganhou")
+} else {
+    document.write("Perdeu")
+}
+
+</script>

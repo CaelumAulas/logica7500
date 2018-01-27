@@ -1,0 +1,49 @@
+<h1>Campeonato</h1>
+
+<!-- <input type="text">
+<input type="text">
+<input type="text">
+<input type="text">
+<button>Ok</button> -->
+
+<script src="lib.js"></script>
+<script>
+    var nVitorias = pegaNumeroCorretoDaTela("Vitorias")
+    var nEmpates = pegaNumeroCorretoDaTela("Empates")
+    var nDerrotas = pegaNumeroCorretoDaTela("Derrotas")
+
+    var nome = prompt("Qual é o nome do time")
+    var pontosA = nVitorias * 3 + nEmpates * 1 + nDerrotas * 0
+
+    document.write("Time " + nome)
+    document.write("<br>")
+    document.write(pontosA + " pontos")
+
+    document.write("<br>")
+
+    var nVitorias = pegaNumeroCorretoDaTela("Vitorias")
+    var nEmpates = pegaNumeroCorretoDaTela("Empates")
+    var nDerrotas = pegaNumeroCorretoDaTela("Derrotas")
+
+    var nome = prompt("Qual é o nome do time")
+    var pontosB = nVitorias * 3 + nEmpates * 1 + nDerrotas * 0
+
+    document.write("Time " + nome)
+    document.write("<br>")
+    document.write(pontosB + " pontos")
+
+    document.write("<br>")
+
+    if(pontosA > pontosB){
+        document.write("O time A ganhou")
+    }
+
+    if(pontosB > pontosA) {
+        document.write("O time B ganhou")
+    }
+
+    if(pontosA == pontosB){
+        document.write("Empatou")
+    }
+    
+</script>
