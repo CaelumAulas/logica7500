@@ -1,0 +1,23 @@
+<h1>Mostra Números</h1>
+<script src="lib.js"></script>
+<script>
+    
+    var total = 0
+
+    var listaPosts = [
+        123724,
+        2345241,
+        1234124.55
+    ]
+
+    
+    // loop repetir codigo um certo numero vezes
+    // percorrer lista
+    
+    for(var i = 0; i < listaPosts.length; i++){
+        mostra(listaPosts[i])
+        total = total + listaPosts[i]
+    }
+  
+    mostra("O total é " + total)
+</script>

@@ -1,23 +1,46 @@
 <meta charset="utf-8">
+<!-- TODO fazer cada vez dar 3 chances pro usuário -->
 <h1>Loteria</h1>
+
+<!-- bind = evento, oque -->
+<button onclick="loteria()">
+    Iniciar Jogo
+</button>
+
+<input type="number" min="0" max="100">
+
 <script src="lib.js"></script>
 <script>
+// acumulador
+// contador
+var numero = 0
+var limite
 
-var limite = pegaNumeroCorretoDaTela("Até quanto")
-var sorteado = Math.round(Math.random() * limite)
+function loteria(){
+    if(numero == 0){
+        limite = pegaNumeroCorretoDaTela("Até quanto")
+        while(isNaN(limite)){
+            limite = pegaNumeroCorretoDaTela("Até quanto")
+        }
+    }
 
-console.log(sorteado)
+    var sorteado = Math.round(Math.random() * limite)
 
-var chute = pegaNumeroCorretoDaTela("Chuta aí de 0 a" + limite)
+    console.log(sorteado)
 
-while(chute > limite || chute < 0 || isNaN(chute)){
-    chute = pegaNumeroCorretoDaTela("Escreveu errado. Digite de novo. De 0 a" + limite)
+    numero = numero + 1
+
+    var chute = pegaNumeroCorretoDaTela("Chuta aí de 0 a" + limite)
+
+    while(console.log("passou no while") || chute > limite || chute < 0 || isNaN(chute)){
+        chute = pegaNumeroCorretoDaTela("Escreveu errado. Digite de novo. De 0 a" + limite)
+    }
+
+    if(chute == sorteado) {
+        mostra(numero + "Ganhou")
+    } else {
+        mostra(numero + " Perdeu")
+    }
 }
-
-if(chute == sorteado) {
-    document.write("Ganhou")
-} else {
-    document.write("Perdeu")
-}
-
 </script>
+

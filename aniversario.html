@@ -1,0 +1,22 @@
+<!--TODO validação do dia do mes e do ano-->
+<!--TODO usar esse código p/ média -->
+<h1>Aniversário</h1>
+<script src="lib.js"></script>
+<script>
+// var lista = ["19", "06", "1993"]
+var lista = prompt("Data de nascimento").split("/")
+var diaAniv = lista[0]
+var mesAniv = lista[1]
+var anoAniv = lista[2]
+
+var data = new Date()
+var diaAtual = data.getDate()
+var mesAtual = data.getMonth() + 1
+var anoAtual = data.getFullYear()
+
+if(mesAtual > mesAniv || (mesAtual == mesAniv && diaAtual > diaAniv)){
+    mostra(anoAtual - anoAniv)
+} else {
+    mostra(anoAtual - anoAniv - 1)
+}
+</script>
